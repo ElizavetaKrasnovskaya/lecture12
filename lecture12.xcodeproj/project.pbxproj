@@ -13,6 +13,7 @@
 		84DA7FBF28EB84A1000483F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DA7FBD28EB84A1000483F9 /* Main.storyboard */; };
 		84DA7FC128EB84A2000483F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DA7FC028EB84A2000483F9 /* Assets.xcassets */; };
 		84DA7FC428EB84A2000483F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DA7FC228EB84A2000483F9 /* LaunchScreen.storyboard */; };
+		84DA7FCC28EB853D000483F9 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 84DA7FCB28EB853D000483F9 /* check.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		84DA7FC028EB84A2000483F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DA7FC328EB84A2000483F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84DA7FC528EB84A2000483F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DA7FCB28EB853D000483F9 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				84DA7FC028EB84A2000483F9 /* Assets.xcassets */,
 				84DA7FC228EB84A2000483F9 /* LaunchScreen.storyboard */,
 				84DA7FC528EB84A2000483F9 /* Info.plist */,
+				84DA7FCB28EB853D000483F9 /* check.png */,
 			);
 			path = lecture12;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DA7FCC28EB853D000483F9 /* check.png in Resources */,
 				84DA7FC428EB84A2000483F9 /* LaunchScreen.storyboard in Resources */,
 				84DA7FC128EB84A2000483F9 /* Assets.xcassets in Resources */,
 				84DA7FBF28EB84A1000483F9 /* Main.storyboard in Resources */,
