@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         if Double(result)?.truncatingRemainder(dividingBy: 1) == 0 {
             result = "\(Int(Double(result) ?? 0.0) )"
         }
-        lblResult.text = result
+        lblResult.text = roundResult(&result)
         operation = .byDefault
         operationCount = 0
     }
@@ -74,6 +74,16 @@ class ViewController: UIViewController {
             value.append("0")
         }
         return value
+    }
+    
+    private func roundResult(_ value: inout String) -> String {
+        String(value.prefix(8))
+    }
+    
+    private func addSwipeGesture(to view: UIView, direction:UISwipeGestureRecognizer.Direction) {
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(deleteDigit))
+        swipeGesture.direction = direction
+        view.addGestureRecognizer(swipeGesture)
     }
     
     @IBAction func setBaseOperation(_ sender: UIButton) {
@@ -106,12 +116,6 @@ class ViewController: UIViewController {
         default:
             operation = .byDefault
         }
-    }
-    
-    private func addSwipeGesture(to view: UIView, direction:UISwipeGestureRecognizer.Direction) {
-        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(deleteDigit))
-        swipeGesture.direction = direction
-        view.addGestureRecognizer(swipeGesture)
     }
     
     @objc
