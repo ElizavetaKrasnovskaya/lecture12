@@ -1,15 +1,5 @@
 import UIKit
 
-enum Operations {
-    case byDefault
-    case division
-    case multiplication
-    case subtraction
-    case addition
-    case compare
-    case percent
-}
-
 class ViewController: UIViewController {
     
     private var operation = Operations.byDefault
@@ -19,6 +9,7 @@ class ViewController: UIViewController {
     private var firstDigit = 0.0
     private var secondDigit = 0.0
     
+    @IBOutlet weak var viewResult: UIView!
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var lblResult: UILabel!
     
@@ -31,6 +22,8 @@ class ViewController: UIViewController {
         buttons.forEach{
             $0.layer.cornerRadius = $0.frame.height / 2
         }
+        addSwipeGesture(to: viewResult, direction: .left)
+        addSwipeGesture(to: viewResult, direction: .right)
     }
     
     private func calculate() {
@@ -114,6 +107,25 @@ class ViewController: UIViewController {
         }
     }
     
+    private func addSwipeGesture(to view: UIView, direction:UISwipeGestureRecognizer.Direction) {
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(deleteDigit))
+        swipeGesture.direction = direction
+        view.addGestureRecognizer(swipeGesture)
+    }
+    
+    @objc
+    private func deleteDigit(_ gestureRecognizer: UISwipeGestureRecognizer) {
+        switch gestureRecognizer.direction {
+        case .left, .right:
+            if !result.isEmpty {
+                result.removeLast(1)
+            }
+            lblResult.text = result
+        default:
+            return
+        }
+    }
+    
     @IBAction func addDigit(_ sender: UIButton) {
         result = result + (sender.titleLabel?.text ?? "")
         lblResult.text = result
@@ -123,4 +135,3 @@ class ViewController: UIViewController {
         changeSign()
     }
 }
-

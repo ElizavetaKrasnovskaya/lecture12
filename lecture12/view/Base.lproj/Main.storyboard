@@ -434,6 +434,7 @@
                     </view>
                     <connections>
                         <outlet property="lblResult" destination="7uS-ok-Jdc" id="v1N-54-f84"/>
+                        <outlet property="viewResult" destination="F1e-Mt-1Os" id="SyC-R4-Sw6"/>
                         <outletCollection property="buttons" destination="V79-xZ-S81" collectionClass="NSMutableArray" id="LnV-03-Wy9"/>
                         <outletCollection property="buttons" destination="b42-z7-0uN" collectionClass="NSMutableArray" id="Dpi-qC-MqF"/>
                         <outletCollection property="buttons" destination="Lbh-MZ-0Y9" collectionClass="NSMutableArray" id="mRM-sK-8iC"/>
