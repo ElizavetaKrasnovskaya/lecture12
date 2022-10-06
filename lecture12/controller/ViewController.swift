@@ -69,7 +69,8 @@ class ViewController: UIViewController {
     }
     
     private func addZero(_ value: inout String) -> String{
-        if value.last == "," {
+        value = value.replacingOccurrences(of: ",", with: ".")
+        if value.last == "." {
             value.append("0")
         }
         return value
